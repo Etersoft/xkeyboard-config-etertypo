@@ -30,8 +30,8 @@ cp -f typo/README %buildroot%_docdir/typo
 cp -f typo/xkb-typo-scheme.png %buildroot%_docdir/typo
 
 %files
-%buildroot%_datadir/X11/xkb/symbols/typo
-%buildroot%_docdir/typo/*
+%_datadir/X11/xkb/symbols/typo
+%_docdir/typo/*
 
 %changelog
 * Wed Apr 14 2010 Devaev Maxim <mdevaev@etersoft.ru> 1.0-alt1
