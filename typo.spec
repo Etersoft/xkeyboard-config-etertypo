@@ -1,6 +1,6 @@
 Name: typo
 Version: 1.0
-Release: alt1
+Release: alt2
 
 Summary: Typographic layout for X11
 License: GPL
@@ -34,6 +34,9 @@ cp -f typo/xkb-typo-scheme.png %buildroot%_docdir/typo
 %_docdir/typo/*
 
 %changelog
+* Wed Apr 14 2010 Devaev Maxim <mdevaev@etersoft.ru> 1.0-alt2
+- Added README text
+
 * Wed Apr 14 2010 Devaev Maxim <mdevaev@etersoft.ru> 1.0-alt1
 - Initial build
 
