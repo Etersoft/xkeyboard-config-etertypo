@@ -1,6 +1,6 @@
 Name: typo
 Version: 1.0
-Release: alt3
+Release: alt4
 
 Summary: Typographic layout for X11
 License: GPL
@@ -25,15 +25,18 @@ Typographic layout for X11
 %install
 mkdir -p %buildroot%_datadir/X11/xkb/symbols
 mkdir -p %buildroot%_docdir/typo
-cp -f typo/symbols_typo %buildroot%_datadir/X11/xkb/symbols/typo
+cp -f typo/symbols_typo %buildroot%_datadir/X11/xkb/symbols/etertypo
 cp -f typo/README %buildroot%_docdir/typo
 cp -f typo/xkb-typo-scheme.png %buildroot%_docdir/typo
 
 %files
-%config(noreplace) %_datadir/X11/xkb/symbols/typo
+%_datadir/X11/xkb/symbols/etertypo
 %_docdir/typo/*
 
 %changelog
+* Wed Apr 14 2010 Devaev Maxim <mdevaev@etersoft.ru> 1.0-alt4
+- Renamed typo to etertypo
+
 * Wed Apr 14 2010 Devaev Maxim <mdevaev@etersoft.ru> 1.0-alt3
 - Scheme file not replaced at updates
 

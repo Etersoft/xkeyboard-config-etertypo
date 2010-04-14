@@ -2,14 +2,14 @@
 
 Конкретный способ конфигурации зависит от того, как именно вы инициализируете xkb. Сделать это можно, например, так:
 -------------------------------------
-$ setxkbmap -option grp:caps_toggle -option lv3:ralt_switch -option grp_led:caps -layout us+typo,ru:2+typo
+$ setxkbmap -option grp:caps_toggle -option lv3:ralt_switch -option grp_led:caps -layout us+etertypo,ru:2+etertypo
 -------------------------------------
 Эта команда задаёт способ переключения (grp:capstoggle, т.е. клавишей Caps Lock), индикатор, используемый для отображения
-раскладки (grpled:caps, т.е. индикатор Caps Lock), а также непосредственно раскладки (us+typo и ru:2+typo). Как можно
+раскладки (grpled:caps, т.е. индикатор Caps Lock), а также непосредственно раскладки (us+etertypo и ru:2+etertypo). Как можно
 заметить, слой с дополнительными символами добавляется к обеим раскладкам (us и ru).
 Также можно использовать такую команду:
 -------------------------------------
-$ setxkbmap -model pc104 -layout us,ru -option lv3:ralt_switch,grp:caps_toggle,misc:typo,grp_led:caps
+$ setxkbmap -model pc104 -layout us,ru -option lv3:ralt_switch,grp:caps_toggle,misc:etertypo,grp_led:caps
 -------------------------------------
 Этот вариант задаёт клавишу «Caps Lock» в качестве переключателя раскладок ru—en, а для временного переключения на слой
 с типографскими символами клавишу «Right Alt» Если вы пользуетесь современными версиями KDE4 или GNOME, то в них слой с
