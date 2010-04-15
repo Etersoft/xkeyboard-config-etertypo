@@ -1,6 +1,6 @@
 Name: xkeyboard-config-etertypo
 Version: 1.1
-Release: alt2
+Release: alt3
 
 Summary: Etersoft typographic layout for X11
 License: GPL
@@ -34,6 +34,9 @@ cp -f etertypo/etertypo-layout.png %buildroot%_docdir/etertypo
 %_docdir/etertypo/*
 
 %changelog
+* Thu Apr 15 2010 Devaev Maxim <mdevaev@etersoft.ru> 1.1-alt3
+- Added keyboard scheme and description
+
 * Thu Apr 15 2010 Devaev Maxim <mdevaev@etersoft.ru> 1.1-alt2
 - Addad pre-revolution symbols, removed yena, back renamed :-)
 
