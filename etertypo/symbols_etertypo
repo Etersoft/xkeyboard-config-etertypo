@@ -31,7 +31,11 @@ xkb_symbols "base" {
     key <AD03> { [NoSymbol, NoSymbol, EuroSign] }; // "e"
     key <AD04> { [NoSymbol, NoSymbol, registered] }; // "r"
     key <AD05> { [NoSymbol, NoSymbol, trademark] }; // "t"
-    key <AD06> { [NoSymbol, NoSymbol, yen] }; // "y"
+//    key <AD06> { [NoSymbol, NoSymbol, yen] }; // "y"
+    key <AD06> { [NoSymbol, NoSymbol, U0463, U0462] };
+    key <AD07> { [NoSymbol, NoSymbol, U0475, U0474] };
+    key <AD08> { [NoSymbol, NoSymbol, U0456, U0406] };
+    key <AD09> { [NoSymbol, NoSymbol, U0473, U0472] };
     key <AD10> { [NoSymbol, NoSymbol, acute, doubleacute] }; // "p"
     key <AD11> { [NoSymbol, NoSymbol, bracketleft, braceleft ] }; // [
     key <AD12> { [NoSymbol, NoSymbol, bracketright, braceright ] }; // ]
