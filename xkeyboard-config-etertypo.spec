@@ -1,39 +1,47 @@
 Name: xkeyboard-config-etertypo
-Version: 1.1
-Release: alt3
+Version: 1.2
+Release: alt1
 
 Summary: Etersoft typographic layout for X11
 License: GPL
 Group: System/X11
 
-Url: http://regolit.com/2006/11/26/xkb-unicode/
+Url: http://kb.etersoft.ru/Типографская_раскладка_Etersoft
 
-Packager: Devaev Maxim <mdevaev@etersoft.ru>
+Packager: Vitaly Lipatov <lav@altlinux.ru>
 
-# http://git.etersoft.ru/people/mdevaev/packages/xkeyboard-config-etertypo.git
+# Source-git: http://git.etersoft.ru/people/mdevaev/packages/xkeyboard-config-etertypo.git
 Source: %name-%version.tar
 
 BuildArchitectures: noarch
 BuildRequires: rpm-build-compat
 
+# we use that dir
+Requires: xkeyboard-config
+
 %description
-Etersoft typographic layout for X11
+Etersoft typographic layout for X11.
+Example: setxkbmap -layout "us,ru(winkeys)" -option -option lv3:lwin_switch,grp:caps_toggle,misc:etertypo,grp_led:caps
 
 %prep
 %setup
 
 %install
-mkdir -p %buildroot%_datadir/X11/xkb/symbols
-mkdir -p %buildroot%_docdir/etertypo
-cp -f etertypo/symbols_etertypo %buildroot%_datadir/X11/xkb/symbols/typo
-cp -f etertypo/README %buildroot%_docdir/etertypo
-cp -f etertypo/etertypo-layout.png %buildroot%_docdir/etertypo
+mkdir -p %buildroot%_datadir/X11/xkb/symbols/
+mkdir -p %buildroot%_docdir/etertypo/
+cp -f etertypo/symbols_etertypo %buildroot%_datadir/X11/xkb/symbols/etertypo
+cp -f etertypo/README %buildroot%_docdir/etertypo/
+cp -f etertypo/etertypo-layout.png %buildroot%_docdir/etertypo/
 
 %files
-%_datadir/X11/xkb/symbols/typo
-%_docdir/etertypo/*
+%_datadir/X11/xkb/symbols/etertypo
+%_docdir/etertypo/
 
 %changelog
+* Fri Jan 16 2015 Vitaly Lipatov <lav@altlinux.ru> 1.2-alt1
+- rename file to etertypo
+- add rouble sign on H key
+
 * Thu Apr 15 2010 Devaev Maxim <mdevaev@etersoft.ru> 1.1-alt3
 - Added keyboard scheme and description
 
