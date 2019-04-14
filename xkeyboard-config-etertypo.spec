@@ -1,5 +1,5 @@
 Name: xkeyboard-config-etertypo
-Version: 1.2
+Version: 1.3
 Release: alt1
 
 Summary: Etersoft typographic layout for X11
@@ -10,7 +10,6 @@ Url: http://kb.etersoft.ru/Типографская_раскладка_Etersoft
 
 Packager: Vitaly Lipatov <lav@altlinux.ru>
 
-# Source-git: http://git.etersoft.ru/people/mdevaev/packages/xkeyboard-config-etertypo.git
 Source: %name-%version.tar
 
 BuildArchitectures: noarch
@@ -21,7 +20,11 @@ Requires: xkeyboard-config
 
 %description
 Etersoft typographic layout for X11.
-Example: setxkbmap -layout "us,ru(winkeys)" -option -option lv3:lwin_switch,grp:caps_toggle,misc:etertypo,grp_led:caps
+Example: setxkbmap -layout "us,ru(winkeys)" -option -option lv3:lwin_switch,grp:caps_toggle,misc:typo,grp_led:caps
+
+TODO: use etertypo instead of typo.
+
+Install hask: replace /usr/share/X11/xkb/symbols/typo with /usr/share/X11/xkb/symbols/etertypo
 
 %prep
 %setup
@@ -38,6 +41,9 @@ cp -f etertypo/etertypo-layout.png %buildroot%_docdir/etertypo/
 %_docdir/etertypo/
 
 %changelog
+* Sun Apr 14 2019 Vitaly Lipatov <lav@altlinux.ru> 1.3-alt1
+- sync with xkeyboard-config-2.19
+
 * Fri Jan 16 2015 Vitaly Lipatov <lav@altlinux.ru> 1.2-alt1
 - rename file to etertypo
 - add rouble sign on H key
